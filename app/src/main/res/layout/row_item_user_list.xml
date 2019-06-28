@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="name"
+            type="String" />
+
+        <variable
+            name="info"
+            type="String" />
+
+        <variable
+            name="receiveTime"
+            type="String" />
+    </data>
+
+    <!-- Parent CardView -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvRowItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_2dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginBottom="@dimen/_5dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/cardview_corner_radius"
+        app:cardElevation="@dimen/cardview_elevation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Parent Constraint Layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvReceiveTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:fontFamily="@font/artifika"
+                android:gravity="center"
+                android:text='@{receiveTime}'
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:fontFamily="@font/artifika"
+                android:gravity="center"
+                android:text='@{name}'
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/subheading_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/profile_image"
+                app:layout_constraintStart_toStartOf="@+id/profile_image"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="32dp"
+                android:fontFamily="@font/artifika"
+                android:gravity="center"
+                android:text='@{info}'
+                android:textSize="@dimen/text_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_120dp"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_2dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/person"
+                app:civ_border_color="#13C2C3"
+                app:civ_border_width="@dimen/_2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.093" />
+
+
+            <!-- Decline Action View-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvDecline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="@dimen/cardview_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/cvAccept"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfo"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.LargeComponent"
+                app:strokeColor="@color/text_color"
+                app:strokeWidth="@dimen/_2dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_65dp"
+                    android:layout_height="@dimen/_65dp"
+                    android:layout_margin="@dimen/_4dp"
+                    android:padding="@dimen/_10dp"
+                    android:src="@drawable/ic_decline" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Accept Action View-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardElevation="@dimen/cardview_elevation"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cvDecline"
+                app:layout_constraintTop_toBottomOf="@+id/tvInfo"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.MyApp.LargeComponent"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="@dimen/_2dp">
+
+                <ImageView
+                    android:layout_width="@dimen/_65dp"
+                    android:layout_height="@dimen/_65dp"
+                    android:layout_margin="@dimen/_4dp"
+                    android:background="@drawable/circle_shape_accecpt_solid"
+                    android:padding="@dimen/_10dp"
+                    android:src="@drawable/ic_check" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/txt_decline"
+                app:layout_constraintBottom_toBottomOf="@+id/cvDecline"
+                app:layout_constraintEnd_toEndOf="@+id/cvDecline"
+                app:layout_constraintHorizontal_bias="0.523"
+                app:layout_constraintStart_toStartOf="@+id/cvDecline" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/txt_accept"
+                app:layout_constraintBottom_toBottomOf="@+id/cvAccept"
+                app:layout_constraintEnd_toEndOf="@+id/cvAccept"
+                app:layout_constraintHorizontal_bias="0.467"
+                app:layout_constraintStart_toStartOf="@+id/cvAccept" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

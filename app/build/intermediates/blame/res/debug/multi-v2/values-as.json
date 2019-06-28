@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-as/values-as.xml",
+            "map": [
+                {
+                    "source": "/home/one/.gradle/caches/transforms-2/files-2.1/a6be45da4cfd13fa93bd0fcd97b0c90b/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

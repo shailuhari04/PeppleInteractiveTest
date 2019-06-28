@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/row_item_user_list.xml",
+        "source": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/src/main/res/layout/row_item_user_list.xml"
+    },
+    {
+        "merged": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_splah.xml",
+        "source": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/src/main/res/layout/activity_splah.xml"
+    },
+    {
+        "merged": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/one/Public/android_projects/downloaded/PeopleInteractiveTest/app/src/main/res/layout/activity_main.xml"
+    }
+]

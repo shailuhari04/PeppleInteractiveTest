@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PeopleInteractiveTest</string>
+    <string name="txt_decline">Decline</string>
+    <string name="txt_accept">Accept</string>
+</resources>
